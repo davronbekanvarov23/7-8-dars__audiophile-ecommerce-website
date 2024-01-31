@@ -1,0 +1,157 @@
+@import "./vendors/normalize";
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
+@import "./base/reset";
+@import "./base/typography";
+@import "./components/button";
+@import "./components/modal";
+@import "./layout/header";
+@import "./layout/aside";
+@import "./layout/footer";
+@import "./pages/home";
+@import "./pages/checkout";
+@import "./pages/detail";
+
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/manrope-v15-latin-regular.woff2") format("woff2");
+}
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/manrope-v15-latin-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Manrope";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/manrope-v15-latin-700.woff2") format("woff2");
+}
+
+*:focus {
+  outline: 2px dotted var(--dark);
+  outline-offset: 3px;
+}
+ul,
+ol {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+img {
+  display: flex;
+  object-fit: cover;
+}
+html {
+  height: 100%;
+}
+
+body {
+  color: $black;
+  height: 100%;
+  font-family: $main-font-family;
+
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.overline {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.subtitle {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+main {
+  flex-grow: 1;
+}
+.container {
+  width: 100%;
+  max-width: 121rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#active {
+  text-decoration: underline;
+}
+
+.device {
+  width: 100%;
+  max-width: 144rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+// SECTION-SHOP
+.shop__list {
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 16.8rem;
+}
+
+.shop__item {
+  cursor: pointer;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  width: 35rem;
+  height: 20.4rem;
+  background-color: $gray;
+  border-radius: 8px;
+  &:hover p {
+    color: $btn-bg;
+  } 
+  h6 {
+    margin-bottom: 1.5rem;
+    width: 11.8rem;
+  }
+}
+
+// AUDIO-GRAY
+
+.audio-gear {
+  display: flex;
+  gap: 12.5rem;
+  margin-bottom: 20rem;
+  img {
+    border-radius: 8px;
+  }
+}
+.audio-gear__content {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem
+  ;
+  margin-top: 14.7rem;
+  width: 44.5rem;
+  span {
+    color: $btn-bg;
+  }
+  p {
+    width: 42.8rem;
+    opacity: 0.5;
+  }
+}
